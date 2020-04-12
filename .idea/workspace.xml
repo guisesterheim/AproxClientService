@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6abf2d26-b447-4d5a-b1e7-3debe7b87b68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aprox/clientservice/util/DocumentUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Initial.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aprox/clientservice/com/aprox/clientservice/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aprox/clientservice/com/aprox/clientservice/service/ClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aprox/clientservice/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aprox/clientservice/model/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aprox/clientservice/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aprox/clientservice/repository/ClientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Application.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aprox/clientservice/com/aprox/clientservice/service/ClientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aprox/clientservice/com/aprox/clientservice/service/ClientService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aprox/clientservice/model/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aprox/clientservice/model/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aprox/clientservice/repository/ClientRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aprox/clientservice/repository/ClientRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +52,7 @@
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Application" />
       <module name="ClientService" />
+      <option name="VM_PARAMETERS" value="-Dspring.profiles.active=dev" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -68,6 +67,10 @@
     <configuration />
   </component>
   <component name="WindowStateProjectService">
+    <state x="447" y="1121" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586718615292">
+      <screen x="0" y="0" width="1920" height="1848" />
+    </state>
+    <state x="447" y="1121" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1848@0.0.1920.1848" timestamp="1586718615292" />
     <state x="797" y="1150" width="374" height="626" key="#com.intellij.ide.util.MemberChooser" timestamp="1586717953784">
       <screen x="0" y="0" width="1920" height="1848" />
     </state>
@@ -76,25 +79,34 @@
       <screen x="0" y="0" width="1920" height="1848" />
     </state>
     <state x="722" y="1212" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1848@0.0.1920.1848" timestamp="1586717309959" />
-    <state width="1320" height="184" key="GridCell.Tab.0.bottom" timestamp="1586718195016">
+    <state width="1320" height="184" key="GridCell.Tab.0.bottom" timestamp="1586719951801">
       <screen x="0" y="0" width="1920" height="1848" />
     </state>
-    <state width="1320" height="184" key="GridCell.Tab.0.bottom/0.0.1920.1848@0.0.1920.1848" timestamp="1586718195016" />
-    <state width="1320" height="184" key="GridCell.Tab.0.center" timestamp="1586718195016">
+    <state width="1320" height="184" key="GridCell.Tab.0.bottom/0.0.1920.1848@0.0.1920.1848" timestamp="1586719951801" />
+    <state width="1320" height="184" key="GridCell.Tab.0.center" timestamp="1586719951800">
       <screen x="0" y="0" width="1920" height="1848" />
     </state>
-    <state width="1320" height="184" key="GridCell.Tab.0.center/0.0.1920.1848@0.0.1920.1848" timestamp="1586718195016" />
-    <state width="1320" height="184" key="GridCell.Tab.0.left" timestamp="1586718195016">
+    <state width="1320" height="184" key="GridCell.Tab.0.center/0.0.1920.1848@0.0.1920.1848" timestamp="1586719951800" />
+    <state width="1320" height="184" key="GridCell.Tab.0.left" timestamp="1586719951800">
       <screen x="0" y="0" width="1920" height="1848" />
     </state>
-    <state width="1320" height="184" key="GridCell.Tab.0.left/0.0.1920.1848@0.0.1920.1848" timestamp="1586718195016" />
-    <state width="1320" height="184" key="GridCell.Tab.0.right" timestamp="1586718195016">
+    <state width="1320" height="184" key="GridCell.Tab.0.left/0.0.1920.1848@0.0.1920.1848" timestamp="1586719951800" />
+    <state width="1320" height="184" key="GridCell.Tab.0.right" timestamp="1586719951801">
       <screen x="0" y="0" width="1920" height="1848" />
     </state>
-    <state width="1320" height="184" key="GridCell.Tab.0.right/0.0.1920.1848@0.0.1920.1848" timestamp="1586718195016" />
-    <state x="652" y="1169" width="672" height="678" key="search.everywhere.popup" timestamp="1586717957547">
+    <state width="1320" height="184" key="GridCell.Tab.0.right/0.0.1920.1848@0.0.1920.1848" timestamp="1586719951801" />
+    <state x="522" y="1121" width="924" height="684" key="Maven.ArtifactSearchDialog" timestamp="1586719710652">
       <screen x="0" y="0" width="1920" height="1848" />
+    </state>
+    <state x="522" y="1121" width="924" height="684" key="Maven.ArtifactSearchDialog/0.0.1920.1848@0.0.1920.1848" timestamp="1586719710652" />
+    <state x="645" y="1290" key="com.intellij.ide.util.TipDialog" timestamp="1586719962428">
+      <screen x="306" y="1080" width="1366" height="768" />
+    </state>
+    <state x="645" y="1290" key="com.intellij.ide.util.TipDialog/306.1080.1366.768/0.0.1920.1080@306.1080.1366.768" timestamp="1586719962428" />
+    <state x="770" y="1566" width="672" height="282" key="search.everywhere.popup" timestamp="1586722741220">
+      <screen x="306" y="1080" width="1366" height="768" />
     </state>
     <state x="652" y="1169" width="672" height="678" key="search.everywhere.popup/0.0.1920.1848@0.0.1920.1848" timestamp="1586717957547" />
+    <state x="770" y="1566" width="672" height="282" key="search.everywhere.popup/306.1080.1366.768/0.0.1920.1080@306.1080.1366.768" timestamp="1586722741220" />
   </component>
 </project>

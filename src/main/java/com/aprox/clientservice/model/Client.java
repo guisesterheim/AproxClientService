@@ -9,15 +9,6 @@ public class Client {
     private String representativeLastName;
     private String phone1;
     private String phone2;
-    private double seedNum;
-
-    public double getSeedNum() {
-        return seedNum;
-    }
-
-    public void setSeedNum(double seedNum) {
-        this.seedNum = seedNum;
-    }
 
     public int getId() {
         return id;
