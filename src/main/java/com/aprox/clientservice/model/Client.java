@@ -2,12 +2,30 @@ package com.aprox.clientservice.model;
 
 public class Client {
 
+    private int id;
     private String companyName;
     private String CNPJ;
     private String representativeFirstName;
     private String representativeLastName;
     private String phone1;
     private String phone2;
+    private double seedNum;
+
+    public double getSeedNum() {
+        return seedNum;
+    }
+
+    public void setSeedNum(double seedNum) {
+        this.seedNum = seedNum;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getRepresentativeFirstName() {
         return representativeFirstName;
