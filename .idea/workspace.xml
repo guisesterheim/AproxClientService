@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6abf2d26-b447-4d5a-b1e7-3debe7b87b68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ClientService.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Create_usage_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aprox/clientservice/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aprox/clientservice/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,15 +86,15 @@
       <screen x="306" y="1080" width="1366" height="768" />
     </state>
     <state x="584" y="1124" width="800" height="677" key="#Notifications/306.1080.1366.768/0.0.1920.1080@306.1080.1366.768" timestamp="1586728793720" />
-    <state x="584" y="1124" width="847" height="677" key="#Project_Structure" timestamp="1586728813811">
+    <state x="584" y="1124" width="847" height="677" key="#Project_Structure" timestamp="1586729106095">
       <screen x="306" y="1080" width="1366" height="768" />
     </state>
-    <state x="584" y="1124" width="847" height="677" key="#Project_Structure/306.1080.1366.768/0.0.1920.1080@306.1080.1366.768" timestamp="1586728813811" />
-    <state x="452" y="1114" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586728848866">
+    <state x="584" y="1124" width="847" height="677" key="#Project_Structure/306.1080.1366.768/0.0.1920.1080@306.1080.1366.768" timestamp="1586729106095" />
+    <state x="452" y="1114" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586729096364">
       <screen x="306" y="1080" width="1366" height="768" />
     </state>
     <state x="447" y="1121" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1848@0.0.1920.1848" timestamp="1586718615292" />
-    <state x="452" y="1114" key="#com.intellij.execution.impl.EditConfigurationsDialog/306.1080.1366.768/0.0.1920.1080@306.1080.1366.768" timestamp="1586728848866" />
+    <state x="452" y="1114" key="#com.intellij.execution.impl.EditConfigurationsDialog/306.1080.1366.768/0.0.1920.1080@306.1080.1366.768" timestamp="1586729096364" />
     <state x="797" y="1150" width="374" height="626" key="#com.intellij.ide.util.MemberChooser" timestamp="1586717953784">
       <screen x="0" y="0" width="1920" height="1848" />
     </state>
