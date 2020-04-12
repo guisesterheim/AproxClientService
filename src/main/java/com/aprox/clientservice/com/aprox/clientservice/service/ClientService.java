@@ -27,4 +27,6 @@ public class ClientService {
     public List<Client> findAll(){
         return clientRepository.findAll();
     }
+    public Client getById(Long id){ return clientRepository.getOne(id);}
+    public Client createClient(Client client){ return clientRepository.saveAndFlush(client);}
 }

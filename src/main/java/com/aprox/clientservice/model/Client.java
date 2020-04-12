@@ -1,16 +1,14 @@
 package com.aprox.clientservice.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity(name="client")
 public class Client {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     private String companyName;
     private String CNPJ;
@@ -19,11 +17,22 @@ public class Client {
     private String phone1;
     private String phone2;
 
-    public int getId() {
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Usage> usages;
+
+    public List<Usage> getUsages() {
+        return usages;
+    }
+
+    public void setUsages(List<Usage> usages) {
+        this.usages = usages;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

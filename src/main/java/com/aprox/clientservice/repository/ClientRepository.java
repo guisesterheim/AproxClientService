@@ -5,27 +5,13 @@ import com.aprox.clientservice.util.DocumentUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
-@Repository("clientRepository")
-public class ClientRepository {
+public interface ClientRepository extends JpaRepository<Client, Long> {
 
-    @Value("#{ T(java.lang.Math).random() * 100 }")
-    private double seedNum;
-
-    public List<Client> findAll(){
-        List<Client> clients = new ArrayList<Client>();
-
-        Client client = new Client();
-        client.setRepresentativeFirstName("Guilherme");
-        client.setRepresentativeLastName("Sesterheim");
-
-        clients.add(client);
-
-        return clients;
-    }
 }
