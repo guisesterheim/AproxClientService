@@ -7,11 +7,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
 @Repository("clientRepository")
-@Profile("dev")
 public class ClientRepository {
 
     @Value("#{ T(java.lang.Math).random() * 100 }")
