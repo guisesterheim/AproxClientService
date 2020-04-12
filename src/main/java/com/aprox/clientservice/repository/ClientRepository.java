@@ -23,7 +23,6 @@ public class ClientRepository {
         Client client = new Client();
         client.setRepresentativeFirstName("Guilherme");
         client.setRepresentativeLastName("Sesterheim");
-        client.setSeedNum(seedNum);
 
         clients.add(client);
 

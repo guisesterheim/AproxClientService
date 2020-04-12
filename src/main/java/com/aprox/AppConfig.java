@@ -1,5 +1,5 @@
-import com.aprox.clientservice.util.DocumentUtil;
-import org.springframework.context.annotation.Bean;
+package com.aprox;
+
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
