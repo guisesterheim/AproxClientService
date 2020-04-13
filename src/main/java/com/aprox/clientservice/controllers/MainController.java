@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 
 import java.util.List;
 
-@ControllerAdvice
 public class MainController {
 
     // TODO: handle exceptions like suggested here: https://www.baeldung.com/global-error-handler-in-a-spring-rest-api

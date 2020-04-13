@@ -4,21 +4,18 @@ import com.aprox.clientservice.model.Client;
 import com.aprox.clientservice.repository.ClientRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
 
-@Service("ClientService")
+@Service
 public class ClientService {
 
-    private ClientRepository clientRepository;
-
     @Autowired
-    public ClientService(ClientRepository clientRepository){
-        this.clientRepository = clientRepository;
-    }
+    private ClientRepository clientRepository;
 
     public List<Client> findAll(){
         return clientRepository.findAll();

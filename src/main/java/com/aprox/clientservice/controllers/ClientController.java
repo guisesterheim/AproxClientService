@@ -1,13 +1,18 @@
 package com.aprox.clientservice.controllers;
 
+import com.aprox.clientservice.repository.ClientRepository;
 import com.aprox.clientservice.service.ClientService;
 import com.aprox.clientservice.model.Client;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1/client")
@@ -24,12 +29,11 @@ public class ClientController extends MainController {
 
     */
 
-    private ClientService clientService;
+    @Value("${app.version}")
+    private String appVersion;
 
     @Autowired
-    public ClientController(ClientService clientService) {
-        this.clientService = clientService;
-    }
+    private ClientService clientService;
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
@@ -58,5 +62,13 @@ public class ClientController extends MainController {
     @PutMapping
     public Client update(@PathVariable Long id, @RequestBody Client client){
         return clientService.updateClient(id, client);
+    }
+
+    @GetMapping
+    @RequestMapping("/version")
+    public Map getAppVersion(){
+        Map map = new HashMap<String, String>();
+        map.put("app-version", appVersion);
+        return map;
     }
 }
