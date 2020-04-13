@@ -7,7 +7,7 @@ import java.util.List;
 public class Client {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String companyName;
@@ -18,14 +18,14 @@ public class Client {
     private String phone2;
 
     @OneToMany(cascade = CascadeType.ALL)
-    private List<Consumption> consumptions;
+    private List<Consumption> consumption;
 
     public List<Consumption> getConsumptions() {
-        return consumptions;
+        return consumption;
     }
 
-    public void setConsumptions(List<Consumption> consumptions) {
-        this.consumptions = consumptions;
+    public void setConsumptions(List<Consumption> consumption) {
+        this.consumption = consumption;
     }
 
     public Long getId() {

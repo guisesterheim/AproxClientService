@@ -1,8 +1,5 @@
 package com.aprox.clientservice.util;
 
-import org.springframework.beans.factory.FactoryBean;
-import org.springframework.beans.factory.ObjectFactory;
-
 public class DocumentUtil {
 
     // CPF

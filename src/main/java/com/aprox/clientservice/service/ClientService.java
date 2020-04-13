@@ -10,8 +10,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.PostConstruct;
 import java.util.List;
 
-@Service("clientService")
-@Profile("dev")
+@Service("ClientService")
 public class ClientService {
 
     private ClientRepository clientRepository;
@@ -19,10 +18,6 @@ public class ClientService {
     @Autowired
     public ClientService(ClientRepository clientRepository){
         this.clientRepository = clientRepository;
-    }
-
-    @PostConstruct
-    private void initialize() { // Runs after any constructor is called
     }
 
     public List<Client> findAll(){
