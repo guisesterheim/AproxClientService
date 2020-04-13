@@ -18,17 +18,6 @@ import java.util.Map;
 @RequestMapping("/api/v1/client")
 public class ClientController extends MainController {
 
-    /*
-    spring.datasource.url=jdbc:mysql://localhost:3306/client_database
-    spring.datasource.username=root
-    spring.datasource.password=clientDatabase421!
-
-    spring.datasource.url=${APROX_CLIENT_DATABASE_URL}}
-    spring.datasource.username=${APROX_CLIENT_DATABASE_USER}}
-    spring.datasource.password=${APROX_CLIENT_DATABASE_PASSWORD}}
-
-    */
-
     @Value("${app.version}")
     private String appVersion;
 
