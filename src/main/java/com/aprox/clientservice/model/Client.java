@@ -18,14 +18,14 @@ public class Client {
     private String phone2;
 
     @OneToMany(cascade = CascadeType.ALL)
-    private List<Usage> usages;
+    private List<Consumption> consumptions;
 
-    public List<Usage> getUsages() {
-        return usages;
+    public List<Consumption> getConsumptions() {
+        return consumptions;
     }
 
-    public void setUsages(List<Usage> usages) {
-        this.usages = usages;
+    public void setConsumptions(List<Consumption> consumptions) {
+        this.consumptions = consumptions;
     }
 
     public Long getId() {

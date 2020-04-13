@@ -6,8 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.sql.Date;
 
-@Entity(name="usage")
-public class Usage {
+@Entity(name="consumption")
+public class Consumption {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

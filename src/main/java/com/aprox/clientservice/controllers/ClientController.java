@@ -1,7 +1,8 @@
 package com.aprox.clientservice.controllers;
 
-import com.aprox.clientservice.com.aprox.clientservice.service.ClientService;
+import com.aprox.clientservice.service.ClientService;
 import com.aprox.clientservice.model.Client;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,11 +14,11 @@ import java.util.List;
 @RequestMapping("/api/v1/client")
 public class ClientController extends MainController {
 
-    @Autowired
     private ClientService clientService;
 
-    public ClientController(HttpStatus status) {
-        super(status);
+    @Autowired
+    public ClientController(ClientService clientService) {
+        this.clientService = clientService;
     }
 
     @GetMapping
@@ -30,12 +31,22 @@ public class ClientController extends MainController {
     @RequestMapping("{id}")
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<Client> get(@PathVariable Long id){
-        return ok(clientService.getById(id));
+        return ok(clientService.getOne(id));
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Client> create(@RequestBody final Client client){
         return ok(clientService.createClient(client));
+    }
+
+    @DeleteMapping
+    public void delete(@PathVariable Long id){
+        clientService.deleteClient(id);
+    }
+
+    @PutMapping
+    public Client update(@PathVariable Long id, @RequestBody Client client){
+        return clientService.updateClient(id, client);
     }
 }

@@ -1,0 +1,2 @@
+INSERT INTO `client_database`.`client` (`company_name`, `cnpj`, `representative_first_name`, `representative_last_name`, `phone1`, `phone2`) VALUES ('Aprox', '12345678912345', 'Guilherme', 'Sesterheim', '123456789', '123456789');
+INSERT INTO `client_database`.`usage` (`client_id`, `month_year`, `request_count`) VALUES ((SELECT MAX(ID) FROM `client_database`.`client`), '2020-04-12', '1');
