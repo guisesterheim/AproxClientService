@@ -1,6 +1,7 @@
 package com.aprox.clientservice.service;
 
 import com.aprox.clientservice.model.Connection;
+import com.aprox.clientservice.model.Environment;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
@@ -20,6 +21,6 @@ public class ClientConnectionsTest {
     @Test
     @DisplayName("return existing connections for this client")
     void whenThereAreNone(){
-        List<Connection> connections = environmentService.findAll();
+        List<Environment> connections = environmentService.findAll();
     }
 }
