@@ -15,13 +15,11 @@ import java.util.List;
 public class ClientConnectionsTest {
 
     @Autowired
-    private EnvironmentConnectionService environmentConnectionService;
+    private EnvironmentService environmentService;
 
     @Test
     @DisplayName("return existing connections for this client")
     void whenThereAreNone(){
-        List<Connection> connections = environmentConnectionService.findAllConnections();
+        List<Connection> connections = environmentService.findAll();
     }
-
-
 }

@@ -15,7 +15,7 @@ public class Environment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String applicationName;
+    private String environmentName;
     private String envConnectionDescription;
     private String connectionString;
     private String connectionPort;
@@ -31,12 +31,12 @@ public class Environment {
         this.id = id;
     }
 
-    public String getApplicationName() {
-        return applicationName;
+    public String getEnvironmentName() {
+        return environmentName;
     }
 
-    public void setApplicationName(String applicationName) {
-        this.applicationName = applicationName;
+    public void setEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
     }
 
     public String getEnvConnectionDescription() {

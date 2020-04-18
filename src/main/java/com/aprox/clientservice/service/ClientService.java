@@ -27,6 +27,8 @@ public class ClientService {
 
     public Client updateClient(Long id, Client client){
         client.setId(id);
+        clientRepository.find
+
         return clientRepository.saveAndFlush(client);
     }
 

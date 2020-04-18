@@ -1,9 +1,15 @@
-/home/sesterheim/IdeaProjects/ClientService/src/main/java/com/aprox/Application.java
 /home/sesterheim/IdeaProjects/ClientService/src/main/java/com/aprox/clientservice/model/Consumption.java
+/home/sesterheim/IdeaProjects/ClientService/src/main/java/com/aprox/clientservice/exceptions/ClientNotFoundException.java
+/home/sesterheim/IdeaProjects/ClientService/src/main/java/com/aprox/clientservice/model/Environment.java
+/home/sesterheim/IdeaProjects/ClientService/src/main/java/com/aprox/clientservice/model/Connection.java
+/home/sesterheim/IdeaProjects/ClientService/src/main/java/com/aprox/clientservice/service/ClientService.java
+/home/sesterheim/IdeaProjects/ClientService/src/main/java/com/aprox/clientservice/service/EnvironmentConnectionService.java
+/home/sesterheim/IdeaProjects/ClientService/src/main/java/com/aprox/Application.java
+/home/sesterheim/IdeaProjects/ClientService/src/main/java/com/aprox/clientservice/repository/EnvironmentRepository.java
 /home/sesterheim/IdeaProjects/ClientService/src/main/java/com/aprox/clientservice/model/Client.java
+/home/sesterheim/IdeaProjects/ClientService/src/main/java/com/aprox/clientservice/repository/ConnectionRepository.java
 /home/sesterheim/IdeaProjects/ClientService/src/main/java/com/aprox/clientservice/util/DocumentUtil.java
 /home/sesterheim/IdeaProjects/ClientService/src/main/java/com/aprox/AppConfig.java
 /home/sesterheim/IdeaProjects/ClientService/src/main/java/com/aprox/clientservice/repository/ClientRepository.java
-/home/sesterheim/IdeaProjects/ClientService/src/main/java/com/aprox/clientservice/service/ClientService.java
 /home/sesterheim/IdeaProjects/ClientService/src/main/java/com/aprox/clientservice/controllers/MainController.java
 /home/sesterheim/IdeaProjects/ClientService/src/main/java/com/aprox/clientservice/controllers/ClientController.java

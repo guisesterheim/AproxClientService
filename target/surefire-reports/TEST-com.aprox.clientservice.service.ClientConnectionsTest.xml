@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.aprox.clientservice.service.ClientServiceTest" time="4.387" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.aprox.clientservice.service.ClientConnectionsTest" time="0.006" tests="1" errors="1" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -58,12 +58,22 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="shouldCreateClient" classname="com.aprox.clientservice.service.ClientServiceTest" time="0.156"/>
-  <testcase name="shouldFindClient" classname="com.aprox.clientservice.service.ClientServiceTest" time="0.019"/>
-  <testcase name="shouldUpdateClient" classname="com.aprox.clientservice.service.ClientServiceTest" time="0.037"/>
-  <testcase name="shouldAddConsumptionToClient" classname="com.aprox.clientservice.service.ClientServiceTest" time="0.026"/>
-  <testcase name="shouldNotAddConsumptionToClient" classname="com.aprox.clientservice.service.ClientServiceTest" time="0.004"/>
-  <testcase name="shouldDeleteClient" classname="com.aprox.clientservice.service.ClientServiceTest" time="0.048"/>
-  <testcase name="shouldFindAllClients" classname="com.aprox.clientservice.service.ClientServiceTest" time="0.099"/>
-  <testcase name="shouldNotCreateClient" classname="com.aprox.clientservice.service.ClientServiceTest" time="0.016"/>
+  <testcase name="whenThereAreNone" classname="com.aprox.clientservice.service.ClientConnectionsTest" time="0.001">
+    <error message="could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet" type="org.springframework.dao.InvalidDataAccessResourceUsageException">org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.aprox.clientservice.service.ClientConnectionsTest.whenThereAreNone(ClientConnectionsTest.java:23)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.aprox.clientservice.service.ClientConnectionsTest.whenThereAreNone(ClientConnectionsTest.java:23)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'connection0_.environmenta_id' in 'field list'
+	at com.aprox.clientservice.service.ClientConnectionsTest.whenThereAreNone(ClientConnectionsTest.java:23)
+</error>
+    <system-out><![CDATA[2020-04-18 15:23:07.427  INFO 5715 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.aprox.clientservice.service.ClientConnectionsTest], using SpringBootContextLoader
+2020-04-18 15:23:07.427  INFO 5715 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.aprox.clientservice.service.ClientConnectionsTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-18 15:23:07.428  INFO 5715 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.aprox.clientservice.service.ClientConnectionsTest]: ClientConnectionsTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-04-18 15:23:07.429  INFO 5715 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.aprox.Application for test class com.aprox.clientservice.service.ClientConnectionsTest
+2020-04-18 15:23:07.431  INFO 5715 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-04-18 15:23:07.431  INFO 5715 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@159a0f0e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6484364f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2ddb6c71, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@29f114e0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6c569caf, org.springframework.test.context.transaction.TransactionalTestExecutionListener@29a5f924, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5f6ba085, org.springframework.test.context.event.EventPublishingTestExecutionListener@7e1ce99c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@26f7b114, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@209d0037, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@22f0e329, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3b39bee2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@20ddc780]
+2020-04-18 15:23:07.440  WARN 5715 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1054, SQLState: 42S22
+2020-04-18 15:23:07.440 ERROR 5715 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown column 'connection0_.environmenta_id' in 'field list'
+]]></system-out>
+  </testcase>
 </testsuite>

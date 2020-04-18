@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.aprox.clientservice.service.ClientConnectionsTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.006 s <<< FAILURE! - in com.aprox.clientservice.service.ClientConnectionsTest
+whenThereAreNone  Time elapsed: 0.001 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.aprox.clientservice.service.ClientConnectionsTest.whenThereAreNone(ClientConnectionsTest.java:23)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at com.aprox.clientservice.service.ClientConnectionsTest.whenThereAreNone(ClientConnectionsTest.java:23)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'connection0_.environmenta_id' in 'field list'
+	at com.aprox.clientservice.service.ClientConnectionsTest.whenThereAreNone(ClientConnectionsTest.java:23)
+
