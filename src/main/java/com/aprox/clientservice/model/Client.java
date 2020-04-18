@@ -35,8 +35,9 @@ public class Client {
         return id;
     }
 
-    public void setId(Long id) {
+    public Client setId(Long id) {
         this.id = id;
+        return this;
     }
 
     public String getRepresentativeFirstName() {

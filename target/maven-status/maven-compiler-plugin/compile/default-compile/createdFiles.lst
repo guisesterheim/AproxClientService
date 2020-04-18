@@ -1,0 +1,9 @@
+com/aprox/AppConfig.class
+com/aprox/clientservice/controllers/ClientController.class
+com/aprox/clientservice/service/ClientService.class
+com/aprox/clientservice/model/Client.class
+com/aprox/clientservice/model/Consumption.class
+com/aprox/Application.class
+com/aprox/clientservice/util/DocumentUtil.class
+com/aprox/clientservice/controllers/MainController.class
+com/aprox/clientservice/repository/ClientRepository.class

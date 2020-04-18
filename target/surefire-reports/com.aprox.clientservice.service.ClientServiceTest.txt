@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.aprox.clientservice.service.ClientServiceTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.068 s - in com.aprox.clientservice.service.ClientServiceTest
