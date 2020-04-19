@@ -1,13 +1,11 @@
 package com.aprox.clientservice.controllers;
 
-import com.aprox.clientservice.repository.ClientRepository;
 import com.aprox.clientservice.service.ClientService;
 import com.aprox.clientservice.model.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -24,22 +22,19 @@ public class ClientController extends MainController {
     @Autowired
     private ClientService clientService;
 
-    @GetMapping
-    @ResponseStatus(HttpStatus.OK)
+    @GetMapping("/list")
     public ResponseEntity<List<Client>> list() {
         return ok(clientService.findAll());
     }
 
-    @GetMapping
-    @RequestMapping("{id}")
-    @ResponseStatus(HttpStatus.OK)
+    @GetMapping("/find/{id}")
     public ResponseEntity<Client> get(@PathVariable Long id){
         return ok(clientService.getOne(id));
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<Client> create(@RequestBody final Client client){
+    public ResponseEntity<Client> create(@RequestBody Client client){
         return ok(clientService.createClient(client));
     }
 

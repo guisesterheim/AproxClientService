@@ -21,14 +21,14 @@ public class ConnectionService {
 
     public Connection createConnection(Connection connection) throws ConnectionObjectException {
         checkConnectionData(connection);
-        return connectionRepository.saveAndFlush(connection);
+        return connectionRepository.save(connection);
     }
 
     public Connection updateConnection(Long id, Connection connection) throws ConnectionObjectException {
         checkConnectionData(connection);
 
         connection.setId(id);
-        return connectionRepository.saveAndFlush(connection);
+        return connectionRepository.save(connection);
     }
 
     public void deleteConnection(Long id){ connectionRepository.deleteById(id);}

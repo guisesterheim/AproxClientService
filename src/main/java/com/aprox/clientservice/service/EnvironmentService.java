@@ -21,14 +21,14 @@ public class EnvironmentService {
 
     public Environment createEnvironment(Environment env) throws EnvironmentObjectException {
         checkEnvironmentData(env);
-        return environmentRepository.saveAndFlush(env);
+        return environmentRepository.save(env);
     }
 
     public Environment updateEnvironment(Long id, Environment environment) throws EnvironmentObjectException {
         checkEnvironmentData(environment);
 
         environment.setId(id);
-        return environmentRepository.saveAndFlush(environment);
+        return environmentRepository.save(environment);
     }
 
     public void deleteEnvironment(Long id){ environmentRepository.deleteById(id);}

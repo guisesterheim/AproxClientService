@@ -23,11 +23,11 @@ public class ClientService {
 
     public Client getOne(Long id){ return clientRepository.getOne(id);}
 
-    public Client createClient(Client client){ return clientRepository.saveAndFlush(client); }
+    public Client createClient(Client client){ return clientRepository.save(client); }
 
     public Client updateClient(Long id, Client client){
         client.setId(id);
-        return clientRepository.saveAndFlush(client);
+        return clientRepository.save(client);
     }
 
     public void deleteClient(Long id){ clientRepository.deleteById(id);}
