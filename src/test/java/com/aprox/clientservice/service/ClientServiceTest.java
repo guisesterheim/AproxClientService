@@ -25,7 +25,7 @@ class ClientServiceTest {
         Client client = new Client();
 
         client.setId(null);
-        client.setConsumptions(null);
+        client.setConsumption(null);
 
         client.setPhone2("123456789");
         client.setPhone1("123456789");
@@ -41,7 +41,7 @@ class ClientServiceTest {
         Client client = new Client();
 
         client.setId(null);
-        client.setConsumptions(null);
+        client.setConsumption(null);
 
         client.setPhone2("987654321");
         client.setPhone1("987654321");
@@ -112,29 +112,29 @@ class ClientServiceTest {
             Integer quantityToBeAdded = 1;
             Client updatedClient = clientService.addConsumption(testClient, quantityToBeAdded);
             assertNotNull(updatedClient, "Did not create the consumption for client ID: "+testClient.getId());
-            assertEquals(updatedClient.getConsumptions().size(), 1, "The total number of consumptions " +
+            assertEquals(updatedClient.getConsumption().size(), 1, "The total number of consumptions " +
                     "for client ID "+testClient.getId()+" is different than expected");
-            assertEquals(updatedClient.getConsumptions().get(0).getRequestCount(), quantityToBeAdded, "The " +
+            assertEquals(updatedClient.getConsumption().get(0).getRequestCount(), quantityToBeAdded, "The " +
                     "request count of the given client consumption is different than expected. Client ID: "+testClient.getId());
 
         }catch(ClientNotFoundException ce){
-            assertTrue(false);
+            fail();
         }
     }
 
     @Test
     @Order(5)
     void shouldNotAddConsumptionToClient(){
-        assertThrows(ClientNotFoundException.class, () -> {clientService.addConsumption((Client) null, 1);},
+        assertThrows(ClientNotFoundException.class, () -> clientService.addConsumption((Client) null, 1),
                 "The ClientNotFoundException should have been thrown. Where did this consumption go?");
-        assertThrows(ClientNotFoundException.class, () -> {clientService.addConsumption((Long) null, 1);},
+        assertThrows(ClientNotFoundException.class, () -> clientService.addConsumption((Long) null, 1),
                 "The ClientNotFoundException should have been thrown. Where did this consumption go?");
     }
 
     @Test
     @Order(6)
     void shouldDeleteClient(){
-        assertDoesNotThrow(() -> {clientService.deleteClient(this.testClient.getId());}, "The client ID " +
+        assertDoesNotThrow(() -> clientService.deleteClient(testClient.getId()), "The client ID " +
                 testClient.getId()+" was not deleted. Check the database!");
         testClient = null;
     }
@@ -156,9 +156,7 @@ class ClientServiceTest {
         Client newClient = createTestClient();
         newClient.setCNPJ(null);
 
-        Throwable error = assertThrows(Throwable.class, () -> {
-            clientService.createClient(newClient);
-        }, "Should not allow to create a client with no given CNPJ");
+        Throwable error = assertThrows(Throwable.class, () -> clientService.createClient(newClient), "Should not allow to create a client with no given CNPJ");
         assertEquals("could not execute statement; SQL [n/a]; constraint [null]; nested exception is " +
                 "org.hibernate.exception.ConstraintViolationException: could not execute statement",
                 error.getMessage());

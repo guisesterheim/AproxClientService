@@ -1,8 +1,10 @@
 package com.aprox.clientservice.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import java.sql.Date;
 import java.util.List;
 
 @Entity(name="client")
@@ -20,14 +22,25 @@ public class Client {
     private String phone1;
     private String phone2;
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private Date dateCreation;
+
+    public Date getDateCreation() {
+        return dateCreation;
+    }
+
+    public void setDateCreation(Date dateCreation) {
+        this.dateCreation = dateCreation;
+    }
+
     @OneToMany(cascade = CascadeType.ALL)
     private List<Consumption> consumption;
 
-    public List<Consumption> getConsumptions() {
+    public List<Consumption> getConsumption() {
         return consumption;
     }
 
-    public void setConsumptions(List<Consumption> consumption) {
+    public void setConsumption(List<Consumption> consumption) {
         this.consumption = consumption;
     }
 

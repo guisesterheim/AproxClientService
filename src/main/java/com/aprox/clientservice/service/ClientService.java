@@ -46,7 +46,7 @@ public class ClientService {
         consumption.setMonthYear(new Date(new java.util.Date().getTime()));
         consumption.setRequestCount(quantity);
 
-        client.getConsumptions().add(consumption);
+        client.getConsumption().add(consumption);
 
         return updateClient(client.getId(), client);
     }
@@ -59,8 +59,8 @@ public class ClientService {
     }
 
     private void checkConsumptionsExist(Client client) {
-        if(client.getConsumptions() == null)
-            client.setConsumptions(new ArrayList<Consumption>());
+        if(client.getConsumption() == null)
+            client.setConsumption(new ArrayList<>());
     }
 
     private void checkAndSetMinimumPossibleConsumption(Integer quantity) {

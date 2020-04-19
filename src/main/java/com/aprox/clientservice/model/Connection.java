@@ -1,8 +1,10 @@
 package com.aprox.clientservice.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import java.sql.Date;
 
 @Entity(name="connection")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -19,6 +21,17 @@ public class Connection {
     private Environment environmentB;
 
     private String description;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private Date dateCreation;
+
+    public Date getDateCreation() {
+        return dateCreation;
+    }
+
+    public void setDateCreation(Date dateCreation) {
+        this.dateCreation = dateCreation;
+    }
 
     public Long getId() {
         return id;
