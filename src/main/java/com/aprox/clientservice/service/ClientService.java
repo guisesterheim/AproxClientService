@@ -23,7 +23,10 @@ public class ClientService {
 
     public Client getOne(Long id){ return clientRepository.getOne(id);}
 
-    public Client createClient(Client client){ return clientRepository.save(client); }
+    public Client createClient(Client client){
+        addCreationDay(client);
+        return clientRepository.save(client);
+    }
 
     public Client updateClient(Long id, Client client){
         client.setId(id);
@@ -31,6 +34,10 @@ public class ClientService {
     }
 
     public void deleteClient(Long id){ clientRepository.deleteById(id);}
+
+    private void addCreationDay(Client client) {
+        client.setDateCreation(new Date(new java.util.Date().getTime()));
+    }
 
     public Client addConsumption(Long clientId, Integer quantity) throws ClientNotFoundException {
         return addConsumption(new Client().setId(clientId), quantity);
