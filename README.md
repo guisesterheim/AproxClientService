@@ -1,5 +1,12 @@
 # AproxClientService
 
+### This is a microservice part of a bigger architecture with the following components:
+
+Authentication: https://github.com/guisesterheim/AproxAuthentication
+
+REAL BASIC Front end on Angular (just for testing purposes): https://github.com/guisesterheim/AproxClientFront
+
+
 This is a test microservice to start POCs with:
 
 1 - Java
