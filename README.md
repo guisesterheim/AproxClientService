@@ -4,7 +4,7 @@
 
 Authentication: https://github.com/guisesterheim/AproxAuthentication
 
-REAL BASIC Front end on Angular (just for testing purposes): https://github.com/guisesterheim/AproxClientFront
+Really BASIC Front end on Angular (just for testing purposes): https://github.com/guisesterheim/AproxClientFront
 
 
 This is a test microservice to start POCs with:
